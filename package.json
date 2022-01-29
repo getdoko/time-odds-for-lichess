@@ -1,0 +1,27 @@
+{
+  "name": "time-odds-for-lichess",
+  "version": "1.0.0",
+  "author": "arun <arun@getdoko.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "preact": "^10.6.4"
+  },
+  "scripts": {
+    "build-extension-dev": "parcel build --no-content-hash src/extension/content.js",
+    "dev": "nodemon --watch src --exec './build-dev.sh'",
+    "build-extension-prod": "parcel build --no-content-hash src/extension/content.js  --no-source-maps",
+    "build-prod": "./build-prod.sh"
+  },
+  "alias": {
+    "react": "preact/compat",
+    "react-dom/test-utils": "preact/test-utils",
+    "react-dom": "preact/compat",
+    "react/jsx-runtime": "preact/jsx-runtime"
+  },
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.0.0",
+    "nodemon": "^2.0.15",
+    "parcel": "^2.2.1"
+  }
+}
